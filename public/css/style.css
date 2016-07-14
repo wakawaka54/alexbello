@@ -3,6 +3,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #3C3C3C;
   color: #F5F5F5;
+  background: linear-gradient(-5deg, #2f3441 50%, #212531 50%);
+  line-height: 2em;
 }
 
 a {
@@ -111,13 +113,33 @@ a {
   margin-right:10px;
 }
 
+.small-sp {
+  margin:10px;
+}
+
+.smedium-sp {
+  margin:20px;
+}
+
+.medium-sp {
+  margin:30px;
+}
+
+.mlarge-sp {
+  margin:40px;
+}
+
+.large-sp {
+  margin:50px;
+}
+
 /* Index Styles */
 
 .index-img-me {
   height:auto;
   border-radius: 20px;
   display:block;
-  max-width:100%;
+  max-width:200px;
 }
 
 .index-canvas {
@@ -128,6 +150,11 @@ a {
 /* Interactive Resume Styles */
 .resume__section-title {
   color: darkblue;
+}
+
+.resume__experience-section {
+  max-width:300px;
+  margin:auto;
 }
 
 .resume__section__entry-title {
