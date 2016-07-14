@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgrey;
 }
 
 a {
@@ -9,27 +10,31 @@ a {
 
 /* Global Styles */
 .font-l {
-  font-size: 3em;
+  font-size: 30px;
 }
 
 .font-ml {
-  font-size: 2.5em;
+  font-size: 22px;
 }
 
 .font-m {
-  font-size:2em;
+  font-size:16px;
 }
 
 .font-ms {
-  font-size:1.5em;
+  font-size:11px;
 }
 
 .font-s {
-  font-size:1em;
+  font-size:9px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.float-right {
+  float:right;
 }
 
 .hr-standard {
@@ -37,6 +42,10 @@ a {
   height: 5px;
   color:black;
   background-color: black;
+}
+
+.italics {
+  font-style: italic;
 }
 
 /* Header Styles */
@@ -53,10 +62,6 @@ a {
   color: black;
 }
 
-.float-right {
-  float:right;
-}
-
 /* Index Styles */
 
 .index-img-me {
@@ -64,4 +69,45 @@ a {
   border-radius: 20px;
   display:block;
   max-width:500px;
+}
+
+/* Interactive Resume Styles */
+.resume__section-title {
+  color: darkblue;
+}
+
+.resume__section__entry-title {
+  font-weight: bold;
+}
+
+.resume__item {
+  padding-top: 10px;
+}
+
+.resume__item p {
+  margin: 0;
+}
+
+/* typed.js */
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
