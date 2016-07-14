@@ -1,7 +1,8 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: lightgrey;
+  background-color: #3C3C3C;
+  color: #F5F5F5;
 }
 
 a {
@@ -9,6 +10,10 @@ a {
 }
 
 /* Global Styles */
+.highlight {
+  background-color:yellow;
+}
+
 .font-l {
   font-size: 30px;
 }
@@ -31,6 +36,7 @@ a {
 
 .text-center {
   text-align: center;
+  vertical-align: middle;
 }
 
 .float-right {
@@ -51,15 +57,58 @@ a {
 /* Header Styles */
 
 .nav-header {
-
+  position: fixed;
+  top: 0px;
+  right: 40px;
+  text-align: right;
 }
 
 .nav-header li {
-  display: inline;
+  margin:20px;
+  font-size:22px;
+  list-style-type: none;
+}
+
+.nav-header li a:before {
+  background: #F5F5F5;
+  height:3px;
 }
 
 .nav-header li a {
-  color: black;
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.nav-header li a:visited {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.nav-header li a:hover {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.nav-header li a:active {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.nav-header .nav-header__smaller:before {
+  height:1px;
+  bottom:0px;
+}
+
+.nav-header .nav-header__smaller {
+
+}
+
+.nav-header .nav-header__li-smaller {
+  margin-top:-20px;
+}
+
+.icon-spacing {
+  margin-right:10px;
 }
 
 /* Index Styles */
@@ -68,7 +117,12 @@ a {
   height:auto;
   border-radius: 20px;
   display:block;
-  max-width:500px;
+  max-width:100%;
+}
+
+.index-canvas {
+  width:100vw;
+  height:100vh;
 }
 
 /* Interactive Resume Styles */

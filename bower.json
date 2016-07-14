@@ -4,6 +4,23 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
-  ]
+    "components",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/wakawaka54/alexbello",
+  "authors": [
+    "wakawaka54 <soue7@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "modernizr": "^3.3.1",
+    "typed.js": "^1.1.4",
+    "hover": "^2.0.2"
+  }
 }
