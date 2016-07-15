@@ -7,4 +7,12 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/canvas', function(req, res) {
+  res.render('canvas', { title: 'Express' });
+});
+
+router.get('*', function(req, res) {
+  res.render('index', { title: 'Express' });
+});
+
 module.exports = router;

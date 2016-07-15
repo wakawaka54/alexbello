@@ -209,17 +209,86 @@ a {
 }
 
 /* Vertical Timeline */
-.vert-timeline {
-  position:relative;
-  width:5px;
-  top:0;
+.vert-timeline::before {
+  content: '';
+  position:absolute;
+  width:4px;
+  top:50px;
   left:50%;
-  height:1000px;
-  background-color: yellow;
+  height:1500px;
+  background-color: #20242d;
 }
 
-.vert-timeline:before {
-  
+.vert-timeline-content {
+  position:relative;
+  top:0px;
+  width:80%;
+  height:80%;
+  background-color: blue;
+  padding:0px 30px 0px 30px;
+}
+
+.vert-timeline-content::after {
+  content: ' ';
+  left:100%;
+  border:solid;
+  border-width:30px;
+  border-color:transparent;
+  position: absolute;
+  border-left-color: blue;
+}
+
+.vert-timeline-block {
+  position: relative;
+  top:100px;
+  width:50%;
+  height:300px;
+}
+
+.vert-timeline-date {
+  position:relative;
+  margin-top:-3px;
+  margin-left:30px;
+  top:25%;
+  left:100%;
+}
+
+.vert-timeline-timepoint {
+  position:relative;
+  bottom:75%;
+  left:100%;
+  width:26px;
+  height:26px;
+  border-radius: 50%;
+  background-color:white;
+  margin-top:26px;
+  margin-left:-11px; /*Width of element minus width of vertical line*/
+}
+
+.vert-timeline-block:nth-child(even)
+{
+  left:50%;
+}
+
+.vert-timeline-block:nth-child(even) .vert-timeline-timepoint{
+  left:0%;
+}
+
+.vert-timeline-block:nth-child(even) .vert-timeline-date{
+  text-align: right;
+  right:0px;
+}
+
+.vert-timeline-block:nth-child(even) .vert-timeline-content{
+  left:20%;
+}
+
+.vert-timeline-block:nth-child(even) .vert-timeline-content::after {
+  content: ' ';
+  left:0%;
+  margin-left:-60px;
+  border-right-color: blue;
+  border-left-color: transparent;
 }
 
 .tall {
