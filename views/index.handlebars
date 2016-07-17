@@ -2,28 +2,38 @@
 
 <script src="/components/typed.js/js/typed.js"></script>
 <script>
-$(function(){
-  $("#type").typed({
-        strings: ["Hi my name is Alex", "I am an electrical engineer", "I am a programmer", "I've done a lot of things", "Enjoy my site! - Alex Bello"],
-        typeSpeed: 10
-      });
-});
+  $(function(){
+    $("#type").typed({
+      strings: ["Hi my name is Alex", "I am an electrical engineer", "I am a programmer", "I've done a lot of things", "Enjoy my site! - Alex Bello"],
+      typeSpeed: 10
+    });
+  });
+
+  $(function() {
+    let refHeight = $('.matchHeight-ref').height();
+
+    $('.matchHeight-el').height(refHeight);
+  });
+
+    $(function() {
+    $('.slickSlider').slick();
+  });
 </script>
 
 <div class="index-canvas text-center font-l">
-    <span id="type" style="line-height:100vh;"></span>
+  <span id="type" style="line-height:100vh;"></span>
 </div>
 
-<div class="row divider">
-</div>
 <!--Intro statement-->
 <div class="color-sec">
   <br/>
   <div class="row">
-    <div class="col-md-4 index-container-img-me clearfix">
-      <img class="img-circle index-img-me" src="/img/me2.jpg"/>
+    <div class="col-md-4 matchHeight-el">
+      <div class="index-img-wrapper" style="height:100%;display:flex;flex-direction:column;justify-content:center;text-align:center;">
+        <img class="index-img-me" src="/img/me2.jpg"/>
+      </div>
     </div>
-    <div class="col-md-6 font-m">
+    <div class="col-md-6 font-m matchHeight-ref">
       <p>
         <p class="font-mml italics">Hey, my name is Alex and I'm a Houston based engineer.</p>
         My educational background is in <span class="electrifying">electrifying engineering </span> but I have programmed for, well, a while (>8 years).<br/> I tried the chemical plant life for a while, and it's not bad, but I have passion for <b>software</b> that I just can't ignore. That's why I am looking for the next big thing, <b>a dream job</b> where I can work on a fun, collaborative team on software, databases, or operations!
@@ -34,15 +44,12 @@ $(function(){
   </div>
 </div>
 
-<div class="row divider-invert">
-</div>
-
 <div class="row">
   <div class="col-md-12 text-center">
-  <i class="fa fa-graduation-cap smedium-sp" aria-hidden="true"></i>
-  <p class="font-ml">Education</p>
-  <p>University of Houston</p>
-  <p>BS in Electrical Engineering</p>
+    <i class="fa fa-graduation-cap smedium-sp" aria-hidden="true"></i>
+    <p class="font-ml">Education</p>
+    <p>University of Houston</p>
+    <p>BS in Electrical Engineering</p>
   </div>
 </div>
 
@@ -57,50 +64,129 @@ $(function(){
   <div class="vert-timeline">
     <div class="vert-timeline-block">
       <div class="vert-timeline-content">
-      <p class="vert-timeline-title font-ml">Chevron Phillips</p>
+        <p class="vert-timeline-title font-ml">Chevron Phillips<span class="font-m vert-timeline-position">Controls Engineer</span></p>
+        <ul class="font-m">
+          <li>Manage Controls, Instrumentation, & Electrical projects up to $500k</li>
+          <li>Developed C# .NET application with SQL backend for Engineering Project Management</li>
+        </ul>
+        <br class="clearfix-me"/>
+      </div>
+      <div class="vert-timeline-timepoint">
+      </div>
+      <div class="vert-timeline-date">
+        <span class="font-m">June 2015</span>
+      </div>
     </div>
-    <div class="vert-timeline-timepoint">
-    </div>
-    <div class="vert-timeline-date">
-    <span class="font-m">May 2016</span>
-    </div>
-  </div>
-  <div class="vert-timeline-block">
-    <div class="vert-timeline-timepoint">
-    </div>
-    <div class="vert-timeline-date">
-        <span class="font-m">May 2016</span>
-    </div>
-    <div class="vert-timeline-content">
-      <p class="vert-timeline-title font-ml">BASF USA</p>
-    </div>
-  </div>
     <div class="vert-timeline-block">
-    <div class="vert-timeline-timepoint">
+      <div class="vert-timeline-timepoint">
+      </div>
+      <div class="vert-timeline-date">
+        <span class="font-m">May 2014 - August 2014</span>
+      </div>
+      <div class="vert-timeline-content">
+        <p class="vert-timeline-title font-ml">BASF USA<span class="font-m vert-timeline-position">Controls Engineer Intern</span></p>
+        <ul class="font-m">
+          <li>Manage small projects up to $100k</li>
+          <li>Utilize SAP to schedule, purchase, track plant activities</li>
+          <li>Developed C# .NET application with Access backend for SIS Preventive Maintenance Tracking</li>
+        </ul>
+        <br class="clearfix-me"/>
+      </div>
     </div>
-    <div class="vert-timeline-content">
-      <p class="vert-timeline-title font-ml">Univeristy of Houston</p>
+    <div class="vert-timeline-block">
+      <div class="vert-timeline-timepoint">
+      </div>
+      <div class="vert-timeline-content">
+        <p class="vert-timeline-title font-ml">Univeristy of Houston<span class="font-m vert-timeline-position">Facilitator</span></p>
+        <ul class="font-m">
+          <li>Lead Physics 2 & Calculus 3 workshop which strengthen student understanding</li>
+          <li>Maintained website with workshop materials and study guides</li>
+        </ul>
+        <br class="clearfix-me"/>
+      </div>
+      <div class="vert-timeline-date">
+        <span class="font-m">Fall 2013 - Spring 2015</span>
+      </div>
     </div>
-    <div class="vert-timeline-date">
-        <span class="font-m">May 2016</span>
+    <div class="vert-timeline-block">
+      <div class="vert-timeline-timepoint">
+      </div>
+      <div class="vert-timeline-content">
+        <p class="vert-timeline-title font-ml">Univeristy of Houston<span class="font-m vert-timeline-position">Facilitator</span></p>
+        <ul class="font-m">
+          <li>Lead Physics 2 & Calculus 3 workshop which strengthen student understanding</li>
+          <li>Maintained website with workshop materials and study guides</li>
+        </ul>
+        <br class="clearfix-me"/>
+      </div>
+      <div class="vert-timeline-date">
+        <span class="font-m">Fall 2013 - Spring 2015</span>
+      </div>
+    </div>
+    <div class="vert-timeline-block">
+      <div class="vert-timeline-timepoint">
+      </div>
+      <div class="vert-timeline-content">
+        <p class="vert-timeline-title font-ml">Univeristy of Houston<span class="font-m vert-timeline-position">Research Assistant</span></p>
+        <ul class="font-m">
+          <li>Created and maintained Linux kiosks with lab presentations</li>
+          <li>Developed LabView data aquisition program for PhD level Electrochemical and Nanofabrication experiment</li>
+        </ul>
+        <br class="clearfix-me"/>
+      </div>
+      <div class="vert-timeline-date">
+        <span class="font-m">Fall 2013 - Spring 2014</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="color-sec-2">
+  <br/>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <i class="fa fa-hdd-o" aria-hidden="true"></i>
+        <p class="font-ml">Projects</p>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4 col-centered">
+      <div class="well">
+        <a class="btn" data-toggle="collapse" href="#guantanamo">Guantanamo - SparkFun 2015</a>
+        <div class="collapse" id="guantanamo">
+        <div class="slickSlider">
+          <div style="height:300px;width:300px;background-color:white;"></div>
+          <div style="height:300px;width:300px;background-color:brown;"></div>
+          <div style="height:300px;width:300px;background-color:blue;"></div>
         </div>
-  </div>
-  </div>
+        </div>
+      </div>
+      <div class="well">
+        <a class="btn" data-toggle="collapse" href="#guantanamo2">Guantanamo - SparkFun 2015</a>
+        <div class="collapse" id="guantanamo2">
+        <div class="slickSlider">
+          <div style="height:300px;width:300px;background-color:white;"></div>
+          <div style="height:300px;width:300px;background-color:brown;"></div>
+          <div style="height:300px;width:300px;background-color:blue;"></div>
+        </div>
+        </div>
+      </div>
+      <div class="well">
+        <a class="btn" data-toggle="collapse" href="#guantanamo3">Guantanamo - SparkFun 2015</a>
+        <div class="collapse" id="guantanamo3">
+        <div class="slickSlider">
+          <div style="height:300px;width:300px;background-color:white;"></div>
+          <div style="height:300px;width:300px;background-color:brown;"></div>
+          <div style="height:300px;width:300px;background-color:blue;"></div>
+        </div>
+        </div>
+      </div>
+
+      </div>
+    </div>    
 </div>
 
-<!--<div class="row">
-    <div class="col-md-4 text-center">
-      <p class="font-m">Chevron Phillips</p>
-      <p class="font-ml">Controls Engineer</p>
-      <p class="resume__experience-section">Managed huge dollar projects. <br/>
-      Developed applications in C# and SQL to increase efficiency!</p>
-    </div>
-    <div class="col-md-4 text-center">
-      <p class="font-m">Chevron Phillips</p>
-      <p class="font-ml">Controls Engineer</p>
-      <p class="resume__experience-section">Managed huge dollar projects. <br/>
-      Developed applications in C# and SQL to increase efficiency!</p>
-    <div>
-</div>-->
 
-</div>
+
+  </div>
