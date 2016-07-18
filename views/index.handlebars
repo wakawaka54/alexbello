@@ -15,8 +15,44 @@
     $('.matchHeight-el').height(refHeight);
   });
 
-    $(function() {
+  $(function() {
     $('.slickSlider').slick();
+  });
+
+  $(function() {
+    $(".vert-timeline-block").each(function(index, el)
+    {
+      if(!isElementInViewport(el)){
+        $(el).find('.vert-timeline-content, .vert-timeline-date').addClass('is-hidden').addClass('animated');
+      }
+    });
+  });
+
+  function isElementInViewport(el) {
+    if(typeof jQuery === "function" && el instanceof jQuery)
+    {
+      el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (rect.top >= 0 && rect.top <= 800);
+  }
+
+  function vertTimelineScroll()
+  {
+    $(".vert-timeline-block").each(function(index,el)
+    {
+      if(isElementInViewport(el) && $(el).find('.vert-timeline-content, .vert.timeline-date').hasClass('is-hidden'))
+      {
+        $(el).find('.vert-timeline-content, .vert-timeline-date').removeClass('is-hidden').addClass('fadeIn');
+      }
+    });
+  }
+
+  $(window).scroll(function(e)
+  {
+    vertTimelineScroll();
   });
 </script>
 
@@ -112,21 +148,6 @@
       <div class="vert-timeline-timepoint">
       </div>
       <div class="vert-timeline-content">
-        <p class="vert-timeline-title font-ml">Univeristy of Houston<span class="font-m vert-timeline-position">Facilitator</span></p>
-        <ul class="font-m">
-          <li>Lead Physics 2 & Calculus 3 workshop which strengthen student understanding</li>
-          <li>Maintained website with workshop materials and study guides</li>
-        </ul>
-        <br class="clearfix-me"/>
-      </div>
-      <div class="vert-timeline-date">
-        <span class="font-m">Fall 2013 - Spring 2015</span>
-      </div>
-    </div>
-    <div class="vert-timeline-block">
-      <div class="vert-timeline-timepoint">
-      </div>
-      <div class="vert-timeline-content">
         <p class="vert-timeline-title font-ml">Univeristy of Houston<span class="font-m vert-timeline-position">Research Assistant</span></p>
         <ul class="font-m">
           <li>Created and maintained Linux kiosks with lab presentations</li>
@@ -143,50 +164,60 @@
 </div>
 
 <div class="color-sec-2">
+
   <br/>
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <i class="fa fa-hdd-o" aria-hidden="true"></i>
-        <p class="font-ml">Projects</p>
-      </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <i class="fa fa-hdd-o" aria-hidden="true"></i>
+      <p class="font-ml">Projects</p>
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
+
     <div class="col-md-4 col-centered">
-      <div class="well">
-        <a class="btn" data-toggle="collapse" href="#guantanamo">Guantanamo - SparkFun 2015</a>
-        <div class="collapse" id="guantanamo">
-        <div class="slickSlider">
-          <div style="height:300px;width:300px;background-color:white;"></div>
-          <div style="height:300px;width:300px;background-color:brown;"></div>
-          <div style="height:300px;width:300px;background-color:blue;"></div>
+
+      <div class="project-list">
+        <div class="well" data-toggle="collapse" href="#guantanamo">
+          <div>
+            <p class="project-list-title font-ml">Guantanamo<span class="project-list-date font-ms">Fall 2014 - Spring 2015</span></p>
+            <p class="project-list-subheader">SparkFun 2015 - University of Houston</p>
+            <p class="project-list-details">Autonomous RC vehicle utilizing Arduino microcontroller and Raspberry Pi object recognition (OpenCV). A dashboard application was written in C# .NET to program and provide real-time commlink to the RC vehicle.
+            <a class="pull-right btn" data-toggle="collapse" href="#guantanamo"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
+            </p> 
+          </div>
+          <div class="collapse" id="guantanamo">
+            <div class="slickSlider">
+              <div style="height:300px;width:300px;background-color:white;"></div>
+              <div style="height:300px;width:300px;background-color:brown;"></div>
+              <div style="height:300px;width:300px;background-color:blue;"></div>
+            </div>
+          </div>
         </div>
+        <div class="well">
+          <a class="btn" data-toggle="collapse" href="#guantanamo2"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
+          <div class="collapse" id="guantanamo2">
+            <div class="slickSlider">
+              <div style="height:300px;width:300px;background-color:white;"></div>
+              <div style="height:300px;width:300px;background-color:brown;"></div>
+              <div style="height:300px;width:300px;background-color:blue;"></div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="well">
-        <a class="btn" data-toggle="collapse" href="#guantanamo2">Guantanamo - SparkFun 2015</a>
-        <div class="collapse" id="guantanamo2">
-        <div class="slickSlider">
-          <div style="height:300px;width:300px;background-color:white;"></div>
-          <div style="height:300px;width:300px;background-color:brown;"></div>
-          <div style="height:300px;width:300px;background-color:blue;"></div>
-        </div>
-        </div>
-      </div>
-      <div class="well">
-        <a class="btn" data-toggle="collapse" href="#guantanamo3">Guantanamo - SparkFun 2015</a>
-        <div class="collapse" id="guantanamo3">
-        <div class="slickSlider">
-          <div style="height:300px;width:300px;background-color:white;"></div>
-          <div style="height:300px;width:300px;background-color:brown;"></div>
-          <div style="height:300px;width:300px;background-color:blue;"></div>
-        </div>
-        </div>
+        <div class="well">
+          <a class="btn" data-toggle="collapse" href="#guantanamo3"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
+          <div class="collapse" id="guantanamo3">
+            <div class="slickSlider">
+              <div style="height:300px;width:300px;background-color:white;"></div>
+              <div style="height:300px;width:300px;background-color:brown;"></div>
+              <div style="height:300px;width:300px;background-color:blue;"></div>
+            </div>
+          </div>
+        </div>   
       </div>
 
-      </div>
-    </div>    
+    </div>
+
+  </div>    
 </div>
 
-
-
-  </div>
+</div>

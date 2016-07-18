@@ -276,6 +276,39 @@ a {
   position:relative;
 }
 
+.is-hidden {
+  opacity: 0;
+}
+
+.bounce-in {
+
+}
+
+/* Project List */
+.project-list {
+  color: #191918;
+}
+
+.project-list-title {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-weight: 700;
+}
+
+.project-list-details {
+  margin-top: 5px;
+}
+
+.project-list-subheader {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-weight: 600;
+}
+
+.project-list-date {
+  float:right;
+}
+
 /* Vertical Timeline */
 .vert-timeline::before {
   content: '';
@@ -290,11 +323,11 @@ a {
 .vert-timeline-content {
   position:relative;
   top:0px;
-  width:70%;
+  width:80%;
   height:100%;
   background-color: #E2E2DE;
   padding:15px 30px 0px 30px;
-  margin-left: 20%;
+  margin-left: 10%;
   color: #191918;
   border-radius: 10px;
   box-shadow: 0px 5px 0px #171A21;
