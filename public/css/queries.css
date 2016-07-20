@@ -46,6 +46,7 @@
 
 	.vert-timeline::before {
 		display:none;
+		max-width: 200px;
 	}
 
 	.vert-timeline-block {
@@ -74,4 +75,16 @@
 	.vert-timeline-block .vert-timeline-content::after {
 		display:none;
 	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 992px) {
+		.index-img-me {
+		  display: block;
+		  border-radius: 100%;
+		  max-width: 200px;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width:200px;
+		}
 }

@@ -243,7 +243,8 @@ a {
 .index-img-me {
   display: inline;
   border-radius: 100%;
-  max-width:200px;
+  width:200px;
+  height: auto;
   margin-left: auto;
   margin-right: 10%;
 }
@@ -253,6 +254,7 @@ a {
   display:flex;
   flex-direction:column;
   justify-content:center;
+  text-align:center;
 }
 
 .index-canvas {
