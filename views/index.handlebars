@@ -1,67 +1,14 @@
 {{> header}}
 
 <script src="/components/typed.js/js/typed.js"></script>
-<script>
-  $(function(){
-    $("#type").typed({
-      strings: ["Hi my name is Alex", "I am an electrical engineer", "I am a programmer", "I've done a lot of things", "Enjoy my site! - Alex Bello"],
-      typeSpeed: 10
-    });
-  });
-
-  $(function() {
-    let refHeight = $('.matchHeight-ref').height();
-
-    $('.matchHeight-el').height(refHeight);
-  });
-
-  $(function() {
-    $('.slickSlider').slick();
-  });
-
-  $(function() {
-    $(".vert-timeline-block").each(function(index, el)
-    {
-      if(!isElementInViewport(el)){
-        $(el).find('.vert-timeline-content, .vert-timeline-date').addClass('is-hidden').addClass('animated');
-      }
-    });
-  });
-
-  function isElementInViewport(el) {
-    if(typeof jQuery === "function" && el instanceof jQuery)
-    {
-      el = el[0];
-    }
-
-    var rect = el.getBoundingClientRect();
-
-    return (rect.top >= 0 && rect.top <= 800);
-  }
-
-  function vertTimelineScroll()
-  {
-    $(".vert-timeline-block").each(function(index,el)
-    {
-      if(isElementInViewport(el) && $(el).find('.vert-timeline-content, .vert.timeline-date').hasClass('is-hidden'))
-      {
-        $(el).find('.vert-timeline-content, .vert-timeline-date').removeClass('is-hidden').addClass('fadeIn');
-      }
-    });
-  }
-
-  $(window).scroll(function(e)
-  {
-    vertTimelineScroll();
-  });
-</script>
+<script src="/js/site.js"></script>
 
 <div class="index-canvas text-center font-l">
   <span id="type" style="line-height:100vh;"></span>
 </div>
 
 <!--Intro statement-->
-<div class="color-sec">
+<div id="home" class="color-sec">
   <br/>
   <div class="row">
     <div class="col-md-4 matchHeight-el">
@@ -80,7 +27,7 @@
   </div>
 </div>
 
-<div class="row">
+<div id="about" class="row">
   <div class="col-md-12 text-center">
     <i class="fa fa-graduation-cap smedium-sp" aria-hidden="true"></i>
     <p class="font-ml">Education</p>
@@ -96,7 +43,7 @@
   </div>
 </div>
 
-<div class="vert-container">
+<div id="exp" class="vert-container">
   <div class="vert-timeline">
     <div class="vert-timeline-block">
       <div class="vert-timeline-content">
@@ -174,50 +121,76 @@
   </div>
   <div class="row">
 
-    <div class="col-md-4 col-centered">
-
+    <div id="projects" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-centered">
       <div class="project-list">
-        <div class="well" data-toggle="collapse" href="#guantanamo">
-          <div>
-            <p class="project-list-title font-ml">Guantanamo<span class="project-list-date font-ms">Fall 2014 - Spring 2015</span></p>
+        <div class="well">
+          <div data-toggle="collapse" href="#project-one">
+            <p class="project-list-title font-ml">Guantanamo
+            <span class="project-list-social font-m">
+              <a href="https://www.youtube.com/playlist?list=PLZ5V9ZyaoA1NWcKJAkbmFzBH6lyjPAFa3">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              </a>
+            </span>
+            <span class="project-list-date font-ms">Fall 2014 - Spring 2015</span></p>
             <p class="project-list-subheader">SparkFun 2015 - University of Houston</p>
             <p class="project-list-details">Autonomous RC vehicle utilizing Arduino microcontroller and Raspberry Pi object recognition (OpenCV). A dashboard application was written in C# .NET to program and provide real-time commlink to the RC vehicle.
-            <a class="pull-right btn" data-toggle="collapse" href="#guantanamo"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
-            </p> 
+            <a class="pull-right btn" data-toggle="collapse" href="#project-one"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
+            </p>
           </div>
-          <div class="collapse" id="guantanamo">
+          <div class="collapse slickSlider-wrapper" id="project-one">
             <div class="slickSlider">
-              <div style="height:300px;width:300px;background-color:white;"></div>
-              <div style="height:300px;width:300px;background-color:brown;"></div>
-              <div style="height:300px;width:300px;background-color:blue;"></div>
+              <img src="/img/guantanamo.png"/>
+              <img src="/img/guantanamo2.png"/>
+              <img src="/img/guantanamo3.png"/>
             </div>
           </div>
         </div>
         <div class="well">
-          <a class="btn" data-toggle="collapse" href="#guantanamo2"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
-          <div class="collapse" id="guantanamo2">
+        <div data-toggle="collapse" href="#project-two">
+            <p class="project-list-title font-ml">Bello Enterprises Management Suite (BEMS)
+            <span class="project-list-social font-m">
+              <!--No social media icons-->
+            </span>
+            <span class="project-list-date font-ms">Spring 2016</span></p>
+            <p class="project-list-subheader">eCommerce</p>
+            <p class="project-list-details">Personal eCommerce inventory, profit and online listing management suite.
+            <a class="pull-right btn" data-toggle="collapse" href="#project-two"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
+            </p>
+          </div>
+          <div class="collapse slickSlider-wrapper" id="project-two">
             <div class="slickSlider">
-              <div style="height:300px;width:300px;background-color:white;"></div>
-              <div style="height:300px;width:300px;background-color:brown;"></div>
-              <div style="height:300px;width:300px;background-color:blue;"></div>
+              <img src="/img/guantanamo.png"/>
+              <img src="/img/guantanamo2.png"/>
+              <img src="/img/guantanamo3.png"/>
             </div>
           </div>
         </div>
         <div class="well">
-          <a class="btn" data-toggle="collapse" href="#guantanamo3"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
-          <div class="collapse" id="guantanamo3">
-            <div class="slickSlider">
-              <div style="height:300px;width:300px;background-color:white;"></div>
-              <div style="height:300px;width:300px;background-color:brown;"></div>
-              <div style="height:300px;width:300px;background-color:blue;"></div>
+        <div data-toggle="collapse" href="#project-three">
+            <p class="project-list-title font-ml">Five Band Graphic Equalizer
+            <span class="project-list-social font-m">
+              <!--No social media icons-->
+            </span>
+            <span class="project-list-date font-ms">Fall 2014</span></p>
+            <p class="project-list-subheader">University of Houston</p>
+            <p class="project-list-details">Electronics project that takes in an analog signal (music) and equalizes different frequencies with analog hardware.
+            <a class="pull-right btn" data-toggle="collapse" href="#project-three"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
+            </p>
             </div>
-          </div>
-        </div>   
+            <div class="collapse slickSlider-wrapper" id="project-three">
+              <div class="slickSlider">
+                <img src="/img/guantanamo.png"/>
+                <img src="/img/guantanamo2.png"/>
+                <img src="/img/guantanamo3.png"/>
+              </div>
+            </div>
+        </div>
+
       </div>
 
     </div>
 
-  </div>    
+  </div>
 </div>
 
 </div>

@@ -11,4 +11,8 @@ router.get('/canvas', function(req, res) {
   res.render('canvas', { title: 'Express' });
 });
 
+router.get('/test', function(req, res) {
+  res.render('test', { title: 'Express' });
+});
+
 module.exports = router;

@@ -169,6 +169,7 @@ a {
 .nav-header li a {
   color: #F5F5F5;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-header li a:visited {
@@ -284,6 +285,10 @@ a {
 
 }
 
+.slickSlider img {
+  margin:0 50px 0 50px;
+}
+
 /* Project List */
 .project-list {
   color: #191918;
@@ -293,6 +298,28 @@ a {
   margin-bottom: 0px;
   padding-bottom: 0px;
   font-weight: 700;
+  vertical-align: middle;
+}
+
+.project-list-social {
+  vertical-align: middle;
+}
+
+.project-list-social a {
+  color: #191918;
+  cursor: hand;
+}
+
+.project-list-social a:visited {
+  color: #8c8c8b;
+}
+
+.project-list-social a:hover {
+  color: #2f2f2f;
+}
+
+.project-list-social a:active {
+  color: #191918;
 }
 
 .project-list-details {
@@ -307,6 +334,7 @@ a {
 
 .project-list-date {
   float:right;
+  vertical-align: middle;
 }
 
 /* Vertical Timeline */

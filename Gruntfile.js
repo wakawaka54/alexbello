@@ -28,7 +28,7 @@ module.exports = function (grunt) {
           'app.js',
           'routes/*.js'
         ],
-        tasks: ['develop', 'delayed-livereload']
+        tasks: ['delayed-livereload']
       },
       js: {
         files: ['public/js/*.js'],
@@ -73,7 +73,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', [
-    'develop',
-    'watch'
+    'develop'
   ]);
 };
