@@ -1,0 +1,77 @@
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 768px) {
+  
+    .nav-header {
+      background-color: #333333;
+      border-radius: 5px;
+      right:5px;
+      margin-top:50px;
+      font-size:12px;
+    }
+
+    .nav-header li {
+      margin: 5px 5px 5px 5px;
+      font-size:16px;
+      text-align: center;
+
+    }
+
+	 .nav-header .nav-header__li-smaller {
+	  margin-top:-10px;
+	}
+
+    .font-l {
+	  font-size: 22px;
+	}
+
+	.font-ml {
+	  font-size: 19px;
+	}
+
+	.font-mml {
+	  font-size:16px;
+	}
+
+	.font-m {
+	  font-size:11px;
+	}
+
+	.font-ms {
+	  font-size:9px;
+	}
+
+	.font-s {
+	  font-size:7px;
+	}
+
+	.vert-timeline::before {
+		display:none;
+	}
+
+	.vert-timeline-block {
+	  position: relative;
+	  margin-top: 10px;
+	  width:100%;
+	  height:auto;
+	}
+
+	.vert-timeline-content {
+		padding: 15px 15px 0px 15px;
+	}
+
+	.vert-timeline-block:nth-child(even) {
+		left:auto;
+	}
+
+	.vert-timeline-date {
+		display: none;
+	}
+
+	.vert-timeline-timepoint {
+		display: none;
+	}
+
+	.vert-timeline-block .vert-timeline-content::after {
+		display:none;
+	}
+}

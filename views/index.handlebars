@@ -1,14 +1,14 @@
 {{> header}}
 
 <script src="/components/typed.js/js/typed.js"></script>
-<script src="/js/site.js"></script>
 
-<div class="index-canvas text-center font-l">
+<div id="home" class="index-canvas text-center font-l">
   <span id="type" style="line-height:100vh;"></span>
 </div>
 
 <!--Intro statement-->
-<div id="home" class="color-sec">
+<div id="about"/>
+<div class="color-sec">
   <br/>
   <div class="row">
     <div class="col-md-4 matchHeight-el">
@@ -27,7 +27,9 @@
   </div>
 </div>
 
-<div id="about" class="row">
+<div id="exp"/>
+
+<div class="row">
   <div class="col-md-12 text-center">
     <i class="fa fa-graduation-cap smedium-sp" aria-hidden="true"></i>
     <p class="font-ml">Education</p>
@@ -43,7 +45,7 @@
   </div>
 </div>
 
-<div id="exp" class="vert-container">
+<div class="vert-container">
   <div class="vert-timeline">
     <div class="vert-timeline-block">
       <div class="vert-timeline-content">
@@ -113,6 +115,7 @@
 <div class="color-sec-2">
 
   <br/>
+<div id="projects"/>
   <div class="row">
     <div class="col-md-12 text-center">
       <i class="fa fa-hdd-o" aria-hidden="true"></i>
@@ -121,8 +124,20 @@
   </div>
   <div class="row">
 
-    <div id="projects" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-centered">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-centered">
       <div class="project-list">
+       <div class="well">
+        <div data-toggle="collapse" href="#project-two">
+            <p class="project-list-title font-ml">WeeklyDev.io
+            <span class="project-list-social font-m">
+              <!--No social media icons-->
+            </span>
+            <span class="project-list-date font-ms">Currently working...</span></p>
+            <p class="project-list-subheader">Website</p>
+            <p class="project-list-details">Working full stack with a dev team for a weeklydev site for reddit/r/webdev (MongoDB + Node.js + NG2).
+            </p>
+          </div>
+        </div>
         <div class="well">
           <div data-toggle="collapse" href="#project-one">
             <p class="project-list-title font-ml">Guantanamo
@@ -154,15 +169,7 @@
             <span class="project-list-date font-ms">Spring 2016</span></p>
             <p class="project-list-subheader">eCommerce</p>
             <p class="project-list-details">Personal eCommerce inventory, profit and online listing management suite.
-            <a class="pull-right btn" data-toggle="collapse" href="#project-two"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
             </p>
-          </div>
-          <div class="collapse slickSlider-wrapper" id="project-two">
-            <div class="slickSlider">
-              <img src="/img/guantanamo.png"/>
-              <img src="/img/guantanamo2.png"/>
-              <img src="/img/guantanamo3.png"/>
-            </div>
           </div>
         </div>
         <div class="well">
@@ -174,16 +181,7 @@
             <span class="project-list-date font-ms">Fall 2014</span></p>
             <p class="project-list-subheader">University of Houston</p>
             <p class="project-list-details">Electronics project that takes in an analog signal (music) and equalizes different frequencies with analog hardware.
-            <a class="pull-right btn" data-toggle="collapse" href="#project-three"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
             </p>
-            </div>
-            <div class="collapse slickSlider-wrapper" id="project-three">
-              <div class="slickSlider">
-                <img src="/img/guantanamo.png"/>
-                <img src="/img/guantanamo2.png"/>
-                <img src="/img/guantanamo3.png"/>
-              </div>
-            </div>
         </div>
 
       </div>

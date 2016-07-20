@@ -148,11 +148,20 @@ a {
 
 /* Header Styles */
 
+.nav-condensed-btn {
+  position: fixed;
+  top:5px;
+  right:5px;
+  background-color: #333333;
+  border: 0px;
+}
+
 .nav-header {
   position: fixed;
   top: 0px;
   right: 40px;
   text-align: right;
+        z-index:9999;
 }
 
 .nav-header li {
