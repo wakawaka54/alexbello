@@ -44,6 +44,11 @@
 	  font-size:7px;
 	}
 
+	.vert-container {
+		margin-left: -80px;
+		margin-right: -80px;
+	}
+
 	.vert-timeline::before {
 		display:none;
 		max-width: 200px;
@@ -86,5 +91,10 @@
 		  margin-left: auto;
 		  margin-right: auto;
 		  width:200px;
+		  margin-bottom: 50px;
 		}
+
+		.slickSlider img {
+  		margin:0px 0px 0px 0px;
+	}
 }

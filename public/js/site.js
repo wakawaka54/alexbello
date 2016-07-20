@@ -13,11 +13,11 @@
   });*/
 
   $(function() {
-    $('a[href*="#"]').click(function(event) {
+    $('a[data-scroll]').click(function(event) {
         var el = event.target;
         var href = $(el).attr('href');
 
-        var scrollTo = $(href).offset().top;
+        var scrollTo = $(href).offset().top - 20;
 
         $('html, body').animate({
           scrollTop: scrollTo + "px"
@@ -35,6 +35,9 @@
   });
 
   $(function() {
+
+    if(window.innerWidth < 992) { return; }
+
     let refHeight = $('.matchHeight-ref').height();
 
     $('.matchHeight-el').height(refHeight);
@@ -45,7 +48,6 @@
       $(el).slick(
       {
         lazyLoad:'progressive',
-        adaptiveHeight: true,
         centerMode: true,
         slideToShow: 1
       });
