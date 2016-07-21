@@ -12,12 +12,68 @@
     });
   });*/
 
+  var scrollTo_MaxElement = 0;
+  var scrollElements;
+  var scrollElementsPos = [];
+  var scrollToElements = [];
+  var scrollToElementsPos = [];
+  var scrollDiff = 0;
+  var scrollStart = 0;
+
+  $(function(){
+
+    scrollElements = $('a[data-scroll]');
+    var scroll_MaxElement = 0;
+    var scroll_MinElement = 99999;
+
+    console.log(scrollElements);
+    scrollElements.sort(function(a, b) { return $(a).offset().top - $(b).offset().top; });
+    console.log(scrollElements);
+    $('a[data-scroll]').each(function(index, element){
+
+        scrollElementsPos.push($(element).offset().top - $('body').scrollTop());
+
+        var href = $(element).attr('href');
+        scrollToElementsPos.push($(href).offset().top);
+        if($(href).offset().top > scrollTo_MaxElement)
+        {
+          scrollTo_MaxElement = $(href).offset().top;
+        }
+    });
+
+    console.log(scrollToElementsPos);
+
+    scrollDiff = $(scrollElements[scrollElements.length - 1]).offset().top - $(scrollElements[0]).offset().top;
+    scrollStart = $(scrollElements[0]).offset().top;
+        $('#ballo-scrollo').css( 'top', scrollStart + "px");
+
+    $(document).scroll(function(e) {
+        var scrollPos = $('body').scrollTop();
+
+        if(scrollPos > scrollToElementsPos[scrollToElementsPos.length - 1]) { $('#ballo-scrollo').css( 'top', scrollElementsPos[scrollElementsPos.length - 1] + "px"); }
+
+        for(var i = 0; i != scrollToElementsPos.length; i++)
+        {
+            if(scrollPos < scrollToElementsPos[i])
+            {
+              let fromI = i - 1;
+              scrollPos = scrollElementsPos[fromI] + ((scrollElementsPos[i] - scrollElementsPos[fromI]) * (scrollPos - scrollToElementsPos[fromI]) / (scrollToElementsPos[i] - scrollToElementsPos[fromI]));
+              $('#ballo-scrollo').css( 'top', scrollPos + "px");
+              break;
+            }
+        }
+    });
+
+  });
+
   $(function() {
     $('a[data-scroll]').click(function(event) {
         var el = event.target;
         var href = $(el).attr('href');
 
         var scrollTo = $(href).offset().top - 20;
+
+        $(el).blur();
 
         $('html, body').animate({
           scrollTop: scrollTo + "px"

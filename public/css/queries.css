@@ -80,6 +80,10 @@
 	.vert-timeline-block .vert-timeline-content::after {
 		display:none;
 	}
+
+	.scrollingBubble {
+		display:none;
+	}
 }
 
 /* Extra Small Devices, Phones */ 
